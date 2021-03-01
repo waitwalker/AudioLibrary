@@ -1,0 +1,23 @@
+PODS:
+  - AudioLibrary (0.1.0):
+    - Toaster
+  - Toaster (2.3.0)
+
+DEPENDENCIES:
+  - AudioLibrary (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Toaster
+
+EXTERNAL SOURCES:
+  AudioLibrary:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AudioLibrary: 3b4b76bc7dba28bccd506a800328e04c2ab175b6
+  Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
+
+PODFILE CHECKSUM: d7946f614d6af55a399bc473f91f23d286e2aea9
+
+COCOAPODS: 1.10.0
