@@ -1,6 +1,6 @@
 {
   "name": "AudioLibrary",
-  "version": "0.5",
+  "version": "0.6",
   "summary": "A short description of AudioLibrary.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/waitwalker/AudioLibrary",
@@ -13,17 +13,12 @@
   },
   "source": {
     "git": "https://github.com/waitwalker/AudioLibrary.git",
-    "tag": "0.5"
+    "tag": "0.6"
   },
   "platforms": {
     "ios": "10.2"
   },
   "swift_versions": "5.0",
   "source_files": "AudioLibrary/Classes/**/*",
-  "dependencies": {
-    "Toaster": [
-
-    ]
-  },
   "swift_version": "5.0"
 }

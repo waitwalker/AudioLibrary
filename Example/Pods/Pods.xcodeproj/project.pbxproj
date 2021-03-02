@@ -7,88 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0100040B742C9FE2FBD66B30F4C9640B /* ETTAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BC9D288D4B6B6A18FFD887E1573336 /* ETTAudioManager.swift */; };
-		0F443315763A875A920901016D8458A2 /* AudioLibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A741ED72CC131307AB09F0535DEC49DE /* AudioLibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		20410E8513BC0CD2C17B94CDD2A79F15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C16153566F792071FD2BC3F75822998 /* Foundation.framework */; };
-		2168C04010F7A1D6911831EE3D42BD22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C16153566F792071FD2BC3F75822998 /* Foundation.framework */; };
-		364219C9C97846D96823CB65382CF615 /* ToastWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1418CF13AC9FA458933B3244DFD7979E /* ToastWindow.swift */; };
-		3DA707A0053A41B79AB85F3FE8E1661D /* Toaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09383F879034ABB909DECF524F750F64 /* Toaster.framework */; };
-		4F5FD9EB9447E689AFB10DCDB05D5531 /* Pods-AudioLibrary_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46BE3156DDCDD0D6AF758F4CF67642FD /* Pods-AudioLibrary_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		673282ABF02D6CB63FF829E8A5854FFA /* UIApplication+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025EC872747CFE2D9A261CAE0CF2546 /* UIApplication+Load.swift */; };
-		6964F4E914A91FA4793C7666A44A7D48 /* Toaster-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 634B0E0473A0833DEBBAED7F2DA6C63A /* Toaster-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7AFA6153809347A2CFC387035F6AEE06 /* AudioLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DC9E4A4EDC6FDFC8BE60D77B34F9C6 /* AudioLibrary-dummy.m */; };
+		135BF54295EAC5437641DF5741749E90 /* AudioLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DC9E4A4EDC6FDFC8BE60D77B34F9C6 /* AudioLibrary-dummy.m */; };
+		2168C04010F7A1D6911831EE3D42BD22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		240884290F8275A748847BE1AF1C45AF /* Pods-AudioLibrary_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46BE3156DDCDD0D6AF758F4CF67642FD /* Pods-AudioLibrary_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24924E5617C3FAF410ACD109BCE2DC3D /* AudioLibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A741ED72CC131307AB09F0535DEC49DE /* AudioLibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27BC429C83169046C483D464228C5101 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		3C087F2D64A0E969D1400F5D661D1F76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		3DC49ACF841B7480048D74E17B7AF542 /* Pods-AudioLibrary_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E34A015788B729093AEA8F18DD72E881 /* Pods-AudioLibrary_Example-dummy.m */; };
 		7BBC54ED24911126B457FC7A77D9274D /* Pods-AudioLibrary_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 16EBA464BF707CF19A41EFC44586A347 /* Pods-AudioLibrary_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		90CCEB1A0D37CD18D6CAD4C3E0108300 /* Toaster-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEE85B3501202EF6281A9030F27D409 /* Toaster-dummy.m */; };
-		A072B37174C81156CA0073F43E6D572A /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB5D65DDF256A065521EF41CAE4C9F /* ToastView.swift */; };
-		AC6E6A6F26A226BF488BB60000214BF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C16153566F792071FD2BC3F75822998 /* Foundation.framework */; };
+		89BDF1C809D4D618C7DD4934DCF3CBF2 /* ETTAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BC9D288D4B6B6A18FFD887E1573336 /* ETTAudioManager.swift */; };
 		BE0B90053056AFE1EAE1E54625FD2AEE /* Pods-AudioLibrary_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DA881C12A9024CA390C46283C41770 /* Pods-AudioLibrary_Tests-dummy.m */; };
-		BE7C249C0CFB0068ED25B8CBDFF18EFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C16153566F792071FD2BC3F75822998 /* Foundation.framework */; };
-		C995EF041B540896CBD9566D969F3431 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29069CECE7E1A258547651F2A17EFD55 /* QuartzCore.framework */; };
-		D695483537DB33F72D87122AE368EA3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C656E8F95D0CD3947C1F6E5F92C77947 /* UIKit.framework */; };
-		DAE9FD705717A077E1DE32C0FBF5A6B2 /* Toaster.h in Headers */ = {isa = PBXBuildFile; fileRef = BC2AB2C9E55573CD8D62EE95011B3BC4 /* Toaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E8067E1F3744CD61316FB8F0C5C5DB3C /* ToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEEF08EFC76ADFB3412EB38C750D19 /* ToastCenter.swift */; };
-		E9E3564ED2FADC6D9FEAF63D23CDDB1F /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E9116C1382844BB21598367F8EE75 /* KeyboardObserver.swift */; };
-		F192CF9DA7652344F5D97E321790B4E9 /* Pods-AudioLibrary_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E34A015788B729093AEA8F18DD72E881 /* Pods-AudioLibrary_Example-dummy.m */; };
-		FF016E3C3C1C0D99C5F9C54F80242F8E /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CF8FE4E99744730CC977CFFB8A78AE /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0547778E026B11C1172D513975A69C47 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B90AB98A7BC6A346D671B36DB990DAC2;
-			remoteInfo = Toaster;
-		};
-		4D883BEEE494E9AA43F9BB683268A52D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 29B0F8E4D53A188934089EA49E98ED15;
-			remoteInfo = "Pods-AudioLibrary_Example";
-		};
-		65A9CD71B10445F9B41600121F4A1238 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B90AB98A7BC6A346D671B36DB990DAC2;
-			remoteInfo = Toaster;
-		};
-		69E8DE36269C1AEFFA876D890F609B98 /* PBXContainerItemProxy */ = {
+		B5211FF3B71E0885AFD1314098B965E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DEF64258E942AAB3AF796B7F2703684A;
 			remoteInfo = AudioLibrary;
 		};
+		C2A9C33DB3363ED3D81F39DD27BC818C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29B0F8E4D53A188934089EA49E98ED15;
+			remoteInfo = "Pods-AudioLibrary_Example";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0219786BAAF2A5978B48B040C28B8DA0 /* Pods_AudioLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AudioLibrary_Tests.framework; path = "Pods-AudioLibrary_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		09383F879034ABB909DECF524F750F64 /* Toaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1418CF13AC9FA458933B3244DFD7979E /* ToastWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastWindow.swift; path = Sources/ToastWindow.swift; sourceTree = "<group>"; };
 		1504BA3ED89FE3F97D99E5A102890DD5 /* AudioLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AudioLibrary.release.xcconfig; sourceTree = "<group>"; };
 		16EBA464BF707CF19A41EFC44586A347 /* Pods-AudioLibrary_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AudioLibrary_Tests-umbrella.h"; sourceTree = "<group>"; };
-		16FEDAAFA144A09E5BD1997929F72441 /* Toaster.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Toaster.modulemap; sourceTree = "<group>"; };
-		29069CECE7E1A258547651F2A17EFD55 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		2B5AA4EC435D4BC0986B177488933F71 /* AudioLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AudioLibrary-prefix.pch"; sourceTree = "<group>"; };
 		40604D9B818B9AC1002DD6AB0C765A93 /* Pods-AudioLibrary_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudioLibrary_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		4287F5038A3510E32B20B6986834A15E /* Pods-AudioLibrary_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AudioLibrary_Example.modulemap"; sourceTree = "<group>"; };
 		46BE3156DDCDD0D6AF758F4CF67642FD /* Pods-AudioLibrary_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AudioLibrary_Example-umbrella.h"; sourceTree = "<group>"; };
 		49087E0D06681E6AC47B33B3279A8020 /* Pods_AudioLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AudioLibrary_Example.framework; path = "Pods-AudioLibrary_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		598251DF3E6D3B75B46F6D8874FAF003 /* Pods-AudioLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudioLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
-		634B0E0473A0833DEBBAED7F2DA6C63A /* Toaster-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toaster-umbrella.h"; sourceTree = "<group>"; };
-		6C16153566F792071FD2BC3F75822998 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6EB2CF868390D6523FA8C8016D332250 /* AudioLibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AudioLibrary.modulemap; sourceTree = "<group>"; };
-		6EEE85B3501202EF6281A9030F27D409 /* Toaster-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toaster-dummy.m"; sourceTree = "<group>"; };
-		76CF8FE4E99744730CC977CFFB8A78AE /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = Sources/Toast.swift; sourceTree = "<group>"; };
-		784BAF5A46E405BCD27575653EE82ABB /* Toaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toaster.debug.xcconfig; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		80DC9E4A4EDC6FDFC8BE60D77B34F9C6 /* AudioLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AudioLibrary-dummy.m"; sourceTree = "<group>"; };
 		8996068D0D766941EA012538DCC424B0 /* Pods-AudioLibrary_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AudioLibrary_Tests.modulemap"; sourceTree = "<group>"; };
-		8F1638E79C4159E20246573103532422 /* Toaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toaster.release.xcconfig; sourceTree = "<group>"; };
 		921B1ED8C0789EEE9BF36EE05BF56D5E /* Pods-AudioLibrary_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudioLibrary_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		95F3E9DEBAA9D5692432ECB104A5530D /* Pods-AudioLibrary_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AudioLibrary_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9A1E9116C1382844BB21598367F8EE75 /* KeyboardObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardObserver.swift; path = Sources/KeyboardObserver.swift; sourceTree = "<group>"; };
 		9C4BA2D6CB6AB571042B4C5A59F18C2B /* Pods-AudioLibrary_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AudioLibrary_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E27B197F8BD9B8E4631C7E35BA7D254 /* AudioLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AudioLibrary.debug.xcconfig; sourceTree = "<group>"; };
@@ -98,50 +61,31 @@
 		A8C620C80E51637F854E3758C4BFBD6A /* Pods-AudioLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudioLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A9D246BD1C37205E4AEAE2EAF03E70DD /* Pods-AudioLibrary_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudioLibrary_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		ABD4455E4868AFABA62ACE841DFBF51D /* AudioLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AudioLibrary.framework; path = AudioLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B025EC872747CFE2D9A261CAE0CF2546 /* UIApplication+Load.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Load.swift"; path = "Sources/UIApplication+Load.swift"; sourceTree = "<group>"; };
-		BC2AB2C9E55573CD8D62EE95011B3BC4 /* Toaster.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Toaster.h; path = Sources/Toaster.h; sourceTree = "<group>"; };
-		BD810337F4A305D60D9250A197AA1EF1 /* Toaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Toaster.framework; path = Toaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C14D8A80F43C1548C9901BF960CCFB70 /* Pods-AudioLibrary_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudioLibrary_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3BC9D288D4B6B6A18FFD887E1573336 /* ETTAudioManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ETTAudioManager.swift; path = AudioLibrary/Classes/ETTAudioManager.swift; sourceTree = "<group>"; };
-		C656E8F95D0CD3947C1F6E5F92C77947 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C747BF49FFAEF7C1264D8E639266747E /* Pods-AudioLibrary_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudioLibrary_Example-Info.plist"; sourceTree = "<group>"; };
-		C9CB5D65DDF256A065521EF41CAE4C9F /* ToastView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastView.swift; path = Sources/ToastView.swift; sourceTree = "<group>"; };
 		CE628DE2B7EDC2E8EBCB83A2585DCDBC /* AudioLibrary-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AudioLibrary-Info.plist"; sourceTree = "<group>"; };
 		DED19214B134744C08B8DC1A8FB73813 /* Pods-AudioLibrary_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AudioLibrary_Example-frameworks.sh"; sourceTree = "<group>"; };
-		E0C9EAAB5F571DF954F946BB520A250F /* Toaster-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toaster-prefix.pch"; sourceTree = "<group>"; };
 		E34A015788B729093AEA8F18DD72E881 /* Pods-AudioLibrary_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AudioLibrary_Example-dummy.m"; sourceTree = "<group>"; };
-		E6C5C0F157CFD9D6C34E18E95318EECD /* Toaster-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Toaster-Info.plist"; sourceTree = "<group>"; };
-		F1AEEF08EFC76ADFB3412EB38C750D19 /* ToastCenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastCenter.swift; path = Sources/ToastCenter.swift; sourceTree = "<group>"; };
 		F4511EFF07BE231ADBB66395CC29AF80 /* Pods-AudioLibrary_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudioLibrary_Tests-Info.plist"; sourceTree = "<group>"; };
 		F7607FFBCCD6D8F40734BFC8C8F5C78C /* AudioLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AudioLibrary.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F7DA881C12A9024CA390C46283C41770 /* Pods-AudioLibrary_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AudioLibrary_Tests-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		333199D44987B53113222EA56B11B35B /* Frameworks */ = {
+		456D7B03D4BD072DB0C477421AC73C01 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20410E8513BC0CD2C17B94CDD2A79F15 /* Foundation.framework in Frameworks */,
-				C995EF041B540896CBD9566D969F3431 /* QuartzCore.framework in Frameworks */,
-				D695483537DB33F72D87122AE368EA3E /* UIKit.framework in Frameworks */,
+				3C087F2D64A0E969D1400F5D661D1F76 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56790A6F0E9C722830D222FD9FB3C510 /* Frameworks */ = {
+		D42047D102390D8D10C97733FC91DF7C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE7C249C0CFB0068ED25B8CBDFF18EFC /* Foundation.framework in Frameworks */,
-				3DA707A0053A41B79AB85F3FE8E1661D /* Toaster.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BCDDC71045A75BA6074DB6D134F4AB90 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AC6E6A6F26A226BF488BB60000214BF0 /* Foundation.framework in Frameworks */,
+				27BC429C83169046C483D464228C5101 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,12 +141,12 @@
 			path = "Target Support Files/Pods-AudioLibrary_Tests";
 			sourceTree = "<group>";
 		};
-		664CDE497676A3A9D3D1CB77BFA01709 /* Pods */ = {
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				958A8FEB40590C369CD763D58B4F148C /* Toaster */,
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
-			name = Pods;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		77A83012C668011E153ACD8D1531C099 /* Targets Support Files */ = {
@@ -212,47 +156,6 @@
 				3CE345D22FB03F206D919FF9840B7C44 /* Pods-AudioLibrary_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		958A8FEB40590C369CD763D58B4F148C /* Toaster */ = {
-			isa = PBXGroup;
-			children = (
-				9A1E9116C1382844BB21598367F8EE75 /* KeyboardObserver.swift */,
-				76CF8FE4E99744730CC977CFFB8A78AE /* Toast.swift */,
-				F1AEEF08EFC76ADFB3412EB38C750D19 /* ToastCenter.swift */,
-				BC2AB2C9E55573CD8D62EE95011B3BC4 /* Toaster.h */,
-				C9CB5D65DDF256A065521EF41CAE4C9F /* ToastView.swift */,
-				1418CF13AC9FA458933B3244DFD7979E /* ToastWindow.swift */,
-				B025EC872747CFE2D9A261CAE0CF2546 /* UIApplication+Load.swift */,
-				ACB4C8950F1210F21FBC5DA45916F156 /* Support Files */,
-			);
-			name = Toaster;
-			path = Toaster;
-			sourceTree = "<group>";
-		};
-		ACB4C8950F1210F21FBC5DA45916F156 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				16FEDAAFA144A09E5BD1997929F72441 /* Toaster.modulemap */,
-				6EEE85B3501202EF6281A9030F27D409 /* Toaster-dummy.m */,
-				E6C5C0F157CFD9D6C34E18E95318EECD /* Toaster-Info.plist */,
-				E0C9EAAB5F571DF954F946BB520A250F /* Toaster-prefix.pch */,
-				634B0E0473A0833DEBBAED7F2DA6C63A /* Toaster-umbrella.h */,
-				784BAF5A46E405BCD27575653EE82ABB /* Toaster.debug.xcconfig */,
-				8F1638E79C4159E20246573103532422 /* Toaster.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Toaster";
-			sourceTree = "<group>";
-		};
-		CD09A86907AC5D994390C0053BC81E08 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6C16153566F792071FD2BC3F75822998 /* Foundation.framework */,
-				29069CECE7E1A258547651F2A17EFD55 /* QuartzCore.framework */,
-				C656E8F95D0CD3947C1F6E5F92C77947 /* UIKit.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		CD5472C6C97AFFDF8A671CE98FAC7C1D /* AudioLibrary */ = {
@@ -271,9 +174,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				2547A8B59AA80540B6C5B873D20F4E94 /* Development Pods */,
-				F73D19C72B5E9B3D1C722A963B24EAF9 /* Frameworks */,
-				664CDE497676A3A9D3D1CB77BFA01709 /* Pods */,
-				DF3490D67D2B539DF64E2C4DF0A4C11C /* Products */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				EFE2CD933C7B50D4A8D06468F0EB4FE8 /* Products */,
 				77A83012C668011E153ACD8D1531C099 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -288,15 +190,12 @@
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		DF3490D67D2B539DF64E2C4DF0A4C11C /* Products */ = {
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ABD4455E4868AFABA62ACE841DFBF51D /* AudioLibrary.framework */,
-				49087E0D06681E6AC47B33B3279A8020 /* Pods_AudioLibrary_Example.framework */,
-				0219786BAAF2A5978B48B040C28B8DA0 /* Pods_AudioLibrary_Tests.framework */,
-				BD810337F4A305D60D9250A197AA1EF1 /* Toaster.framework */,
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E213AE9C5D35F29A5A84DC56C1676B84 /* Support Files */ = {
@@ -314,40 +213,32 @@
 			path = "Example/Pods/Target Support Files/AudioLibrary";
 			sourceTree = "<group>";
 		};
-		F73D19C72B5E9B3D1C722A963B24EAF9 /* Frameworks */ = {
+		EFE2CD933C7B50D4A8D06468F0EB4FE8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				09383F879034ABB909DECF524F750F64 /* Toaster.framework */,
-				CD09A86907AC5D994390C0053BC81E08 /* iOS */,
+				ABD4455E4868AFABA62ACE841DFBF51D /* AudioLibrary.framework */,
+				49087E0D06681E6AC47B33B3279A8020 /* Pods_AudioLibrary_Example.framework */,
+				0219786BAAF2A5978B48B040C28B8DA0 /* Pods_AudioLibrary_Tests.framework */,
 			);
-			name = Frameworks;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		749376450D87D8BD0C23F249F8217C51 /* Headers */ = {
+		379EB99D409CD30DF86D0B451FCC9A2B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F5FD9EB9447E689AFB10DCDB05D5531 /* Pods-AudioLibrary_Example-umbrella.h in Headers */,
+				240884290F8275A748847BE1AF1C45AF /* Pods-AudioLibrary_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		800768CC367A9987183F004D91AA3A51 /* Headers */ = {
+		4816858E9030781DD443406E7BDA2050 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F443315763A875A920901016D8458A2 /* AudioLibrary-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D5BB23E9BC0293D8B726A2442FFC0DC /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6964F4E914A91FA4793C7666A44A7D48 /* Toaster-umbrella.h in Headers */,
-				DAE9FD705717A077E1DE32C0FBF5A6B2 /* Toaster.h in Headers */,
+				24924E5617C3FAF410ACD109BCE2DC3D /* AudioLibrary-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +265,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				22812557C1AD7586FA1879D0ED3E0B6A /* PBXTargetDependency */,
+				02C74825BDCFCF6E6D617EC9B0D8CEC4 /* PBXTargetDependency */,
 			);
 			name = "Pods-AudioLibrary_Tests";
 			productName = "Pods-AudioLibrary_Tests";
@@ -383,55 +274,35 @@
 		};
 		29B0F8E4D53A188934089EA49E98ED15 /* Pods-AudioLibrary_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B07527EAF59DFEE816D44093579A3E91 /* Build configuration list for PBXNativeTarget "Pods-AudioLibrary_Example" */;
+			buildConfigurationList = 98F56FF19F213B9B4164CC42511983B2 /* Build configuration list for PBXNativeTarget "Pods-AudioLibrary_Example" */;
 			buildPhases = (
-				749376450D87D8BD0C23F249F8217C51 /* Headers */,
-				4D58C7615C606844F86D6BB5218BA469 /* Sources */,
-				BCDDC71045A75BA6074DB6D134F4AB90 /* Frameworks */,
-				2F629967937640A500D1E9768F717E37 /* Resources */,
+				379EB99D409CD30DF86D0B451FCC9A2B /* Headers */,
+				38B7C7ED15C9594BA57C62EB3BAC4C00 /* Sources */,
+				D42047D102390D8D10C97733FC91DF7C /* Frameworks */,
+				9FEF7467D954CDEA66C7E44349042E8E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B9B73AB589457530C4218F7AE051E8D3 /* PBXTargetDependency */,
-				B993A5D08B23B8B35F678EA02F390C0E /* PBXTargetDependency */,
+				013667A542A655456F3C3F9B68F37DA9 /* PBXTargetDependency */,
 			);
 			name = "Pods-AudioLibrary_Example";
 			productName = "Pods-AudioLibrary_Example";
 			productReference = 49087E0D06681E6AC47B33B3279A8020 /* Pods_AudioLibrary_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B90AB98A7BC6A346D671B36DB990DAC2 /* Toaster */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8DC0AC53C65EEC92A9827B2732B5FC48 /* Build configuration list for PBXNativeTarget "Toaster" */;
-			buildPhases = (
-				8D5BB23E9BC0293D8B726A2442FFC0DC /* Headers */,
-				496FA2FFBD2ABC1EF7507ABB47BEB8D5 /* Sources */,
-				333199D44987B53113222EA56B11B35B /* Frameworks */,
-				8674D1BEE094B81298F5D5761DF9A0D1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Toaster;
-			productName = Toaster;
-			productReference = BD810337F4A305D60D9250A197AA1EF1 /* Toaster.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		DEF64258E942AAB3AF796B7F2703684A /* AudioLibrary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 10CFC6F366B4FD13EF2BE80DBF0CF6A6 /* Build configuration list for PBXNativeTarget "AudioLibrary" */;
+			buildConfigurationList = CEEEA753CF779FE526109AB302792EE0 /* Build configuration list for PBXNativeTarget "AudioLibrary" */;
 			buildPhases = (
-				800768CC367A9987183F004D91AA3A51 /* Headers */,
-				A7D449D14A9A58991F80FB85B9838BB2 /* Sources */,
-				56790A6F0E9C722830D222FD9FB3C510 /* Frameworks */,
-				F02E469ADEB4839C442577152E8CEEB7 /* Resources */,
+				4816858E9030781DD443406E7BDA2050 /* Headers */,
+				47E9C43CEC42FBB95364192421EF8064 /* Sources */,
+				456D7B03D4BD072DB0C477421AC73C01 /* Frameworks */,
+				5F40BC731CA0E6ADDB58A6AACB319DFA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				929CA1DC9B28DD6D836D37A31227E200 /* PBXTargetDependency */,
 			);
 			name = AudioLibrary;
 			productName = AudioLibrary;
@@ -456,20 +327,19 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = DF3490D67D2B539DF64E2C4DF0A4C11C /* Products */;
+			productRefGroup = EFE2CD933C7B50D4A8D06468F0EB4FE8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				DEF64258E942AAB3AF796B7F2703684A /* AudioLibrary */,
 				29B0F8E4D53A188934089EA49E98ED15 /* Pods-AudioLibrary_Example */,
 				069C469A152A551A78723C50D58D7BCD /* Pods-AudioLibrary_Tests */,
-				B90AB98A7BC6A346D671B36DB990DAC2 /* Toaster */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2F629967937640A500D1E9768F717E37 /* Resources */ = {
+		5F40BC731CA0E6ADDB58A6AACB319DFA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -483,14 +353,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8674D1BEE094B81298F5D5761DF9A0D1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F02E469ADEB4839C442577152E8CEEB7 /* Resources */ = {
+		9FEF7467D954CDEA66C7E44349042E8E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -500,25 +363,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		496FA2FFBD2ABC1EF7507ABB47BEB8D5 /* Sources */ = {
+		38B7C7ED15C9594BA57C62EB3BAC4C00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9E3564ED2FADC6D9FEAF63D23CDDB1F /* KeyboardObserver.swift in Sources */,
-				FF016E3C3C1C0D99C5F9C54F80242F8E /* Toast.swift in Sources */,
-				E8067E1F3744CD61316FB8F0C5C5DB3C /* ToastCenter.swift in Sources */,
-				90CCEB1A0D37CD18D6CAD4C3E0108300 /* Toaster-dummy.m in Sources */,
-				A072B37174C81156CA0073F43E6D572A /* ToastView.swift in Sources */,
-				364219C9C97846D96823CB65382CF615 /* ToastWindow.swift in Sources */,
-				673282ABF02D6CB63FF829E8A5854FFA /* UIApplication+Load.swift in Sources */,
+				3DC49ACF841B7480048D74E17B7AF542 /* Pods-AudioLibrary_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D58C7615C606844F86D6BB5218BA469 /* Sources */ = {
+		47E9C43CEC42FBB95364192421EF8064 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F192CF9DA7652344F5D97E321790B4E9 /* Pods-AudioLibrary_Example-dummy.m in Sources */,
+				135BF54295EAC5437641DF5741749E90 /* AudioLibrary-dummy.m in Sources */,
+				89BDF1C809D4D618C7DD4934DCF3CBF2 /* ETTAudioManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,46 +388,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7D449D14A9A58991F80FB85B9838BB2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7AFA6153809347A2CFC387035F6AEE06 /* AudioLibrary-dummy.m in Sources */,
-				0100040B742C9FE2FBD66B30F4C9640B /* ETTAudioManager.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		22812557C1AD7586FA1879D0ED3E0B6A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-AudioLibrary_Example";
-			target = 29B0F8E4D53A188934089EA49E98ED15 /* Pods-AudioLibrary_Example */;
-			targetProxy = 4D883BEEE494E9AA43F9BB683268A52D /* PBXContainerItemProxy */;
-		};
-		929CA1DC9B28DD6D836D37A31227E200 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Toaster;
-			target = B90AB98A7BC6A346D671B36DB990DAC2 /* Toaster */;
-			targetProxy = 0547778E026B11C1172D513975A69C47 /* PBXContainerItemProxy */;
-		};
-		B993A5D08B23B8B35F678EA02F390C0E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Toaster;
-			target = B90AB98A7BC6A346D671B36DB990DAC2 /* Toaster */;
-			targetProxy = 65A9CD71B10445F9B41600121F4A1238 /* PBXContainerItemProxy */;
-		};
-		B9B73AB589457530C4218F7AE051E8D3 /* PBXTargetDependency */ = {
+		013667A542A655456F3C3F9B68F37DA9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AudioLibrary;
 			target = DEF64258E942AAB3AF796B7F2703684A /* AudioLibrary */;
-			targetProxy = 69E8DE36269C1AEFFA876D890F609B98 /* PBXContainerItemProxy */;
+			targetProxy = B5211FF3B71E0885AFD1314098B965E7 /* PBXContainerItemProxy */;
+		};
+		02C74825BDCFCF6E6D617EC9B0D8CEC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-AudioLibrary_Example";
+			target = 29B0F8E4D53A188934089EA49E98ED15 /* Pods-AudioLibrary_Example */;
+			targetProxy = C2A9C33DB3363ED3D81F39DD27BC818C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0A75CC7E775F72F41F16DA1AEA56D879 /* Debug */ = {
+		211D2F700BECD32D5BBAB954E045083B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A8C620C80E51637F854E3758C4BFBD6A /* Pods-AudioLibrary_Example.debug.xcconfig */;
 			buildSettings = {
@@ -664,6 +501,40 @@
 			};
 			name = Release;
 		};
+		2D71C5561A3D57C70C1E4EA8A291373F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 598251DF3E6D3B75B46F6D8874FAF003 /* Pods-AudioLibrary_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AudioLibrary_Example/Pods-AudioLibrary_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AudioLibrary_Example/Pods-AudioLibrary_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		35F6F6B7D0079D9138F2AA6EF4C66562 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 921B1ED8C0789EEE9BF36EE05BF56D5E /* Pods-AudioLibrary_Tests.release.xcconfig */;
@@ -731,134 +602,7 @@
 			};
 			name = Debug;
 		};
-		3BC53684747C52ADB1FEDF200BC7170B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1504BA3ED89FE3F97D99E5A102890DD5 /* AudioLibrary.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AudioLibrary/AudioLibrary-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AudioLibrary/AudioLibrary-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AudioLibrary/AudioLibrary.modulemap";
-				PRODUCT_MODULE_NAME = AudioLibrary;
-				PRODUCT_NAME = AudioLibrary;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		74AC9B51D3D8865328B310F1DBD6DC61 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 598251DF3E6D3B75B46F6D8874FAF003 /* Pods-AudioLibrary_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AudioLibrary_Example/Pods-AudioLibrary_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AudioLibrary_Example/Pods-AudioLibrary_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		74C6A2D3EFAB0927FB55AF9FD3C8E129 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 784BAF5A46E405BCD27575653EE82ABB /* Toaster.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Toaster/Toaster-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Toaster/Toaster-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Toaster/Toaster.modulemap";
-				PRODUCT_MODULE_NAME = Toaster;
-				PRODUCT_NAME = Toaster;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C655D60919E760655606A1D4EC66F944 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F1638E79C4159E20246573103532422 /* Toaster.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Toaster/Toaster-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Toaster/Toaster-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Toaster/Toaster.modulemap";
-				PRODUCT_MODULE_NAME = Toaster;
-				PRODUCT_NAME = Toaster;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D3B8B94BAC9F5B1AF2F6C90184A84E33 /* Debug */ = {
+		6D71E1CC4AAAD77D96287044611EE954 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E27B197F8BD9B8E4631C7E35BA7D254 /* AudioLibrary.debug.xcconfig */;
 			buildSettings = {
@@ -955,18 +699,41 @@
 			};
 			name = Debug;
 		};
+		E53D64441BC5D1F71C140D05D4D3F511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1504BA3ED89FE3F97D99E5A102890DD5 /* AudioLibrary.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AudioLibrary/AudioLibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AudioLibrary/AudioLibrary-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AudioLibrary/AudioLibrary.modulemap";
+				PRODUCT_MODULE_NAME = AudioLibrary;
+				PRODUCT_NAME = AudioLibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		10CFC6F366B4FD13EF2BE80DBF0CF6A6 /* Build configuration list for PBXNativeTarget "AudioLibrary" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D3B8B94BAC9F5B1AF2F6C90184A84E33 /* Debug */,
-				3BC53684747C52ADB1FEDF200BC7170B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		3C19DC73A2778A394DB4133D52462A4E /* Build configuration list for PBXNativeTarget "Pods-AudioLibrary_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -985,20 +752,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8DC0AC53C65EEC92A9827B2732B5FC48 /* Build configuration list for PBXNativeTarget "Toaster" */ = {
+		98F56FF19F213B9B4164CC42511983B2 /* Build configuration list for PBXNativeTarget "Pods-AudioLibrary_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				74C6A2D3EFAB0927FB55AF9FD3C8E129 /* Debug */,
-				C655D60919E760655606A1D4EC66F944 /* Release */,
+				211D2F700BECD32D5BBAB954E045083B /* Debug */,
+				2D71C5561A3D57C70C1E4EA8A291373F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B07527EAF59DFEE816D44093579A3E91 /* Build configuration list for PBXNativeTarget "Pods-AudioLibrary_Example" */ = {
+		CEEEA753CF779FE526109AB302792EE0 /* Build configuration list for PBXNativeTarget "AudioLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0A75CC7E775F72F41F16DA1AEA56D879 /* Debug */,
-				74AC9B51D3D8865328B310F1DBD6DC61 /* Release */,
+				6D71E1CC4AAAD77D96287044611EE954 /* Debug */,
+				E53D64441BC5D1F71C140D05D4D3F511 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

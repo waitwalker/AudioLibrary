@@ -1,22 +1,15 @@
 PODS:
-  - AudioLibrary (0.5):
-    - Toaster
-  - Toaster (2.3.0)
+  - AudioLibrary (0.6)
 
 DEPENDENCIES:
   - AudioLibrary (from `../`)
-
-SPEC REPOS:
-  trunk:
-    - Toaster
 
 EXTERNAL SOURCES:
   AudioLibrary:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AudioLibrary: 59950ff4057dfcfbf033513d96a0e984d39be07e
-  Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
+  AudioLibrary: 64c55b58d629b0849bb1dfa129616655263a9aa3
 
 PODFILE CHECKSUM: d7946f614d6af55a399bc473f91f23d286e2aea9
 

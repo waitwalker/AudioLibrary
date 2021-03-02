@@ -294,12 +294,10 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AudioLibrary_Example/Pods-AudioLibrary_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AudioLibrary/AudioLibrary.framework",
-				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioLibrary.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
