@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        ETTAudioManager.sharedInstance.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
 
     @IBAction func startRecording(_ sender: UIButton) {
         ETTAudioManager.sharedInstance.startRecording(filePath: nil)
-        ETTAudioManager.sharedInstance.delegate = self
+        
     }
     
     @IBAction func stopRecording(_ sender: UIButton) {
@@ -32,9 +32,13 @@ class ViewController: UIViewController {
     }
     
     
-    
     @IBAction func startPlaying(_ sender: UIButton) {
         ETTAudioManager.sharedInstance.startPlayingAudio()
+        print("录音播放时长:\(ETTAudioManager.sharedInstance.playingDuration)")
+    }
+    
+    @IBAction func pausePlaying(_ sender: UIButton) {
+        ETTAudioManager.sharedInstance.pausePlayingAudio()
         print("录音播放时长:\(ETTAudioManager.sharedInstance.playingDuration)")
     }
     
@@ -46,10 +50,9 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: ETTAudioManagerDelegate {
+    
     func audioMeterDidUpdate(_ audioDB: Float) {
-        
         let currentAudioDB = Int((Int(audioDB) + 50) * 3 / 2)
-        
         print("current audio db:\(currentAudioDB)")
         if currentAudioDB < 10 {
             self.voiceImageView.image = UIImage(named: "recording_ volume_0")
@@ -62,6 +65,19 @@ extension ViewController: ETTAudioManagerDelegate {
         } else {
             self.voiceImageView.image = UIImage(named: "recording_ volume_4")
         }
+    }
+    
+    func audioRecordDidFinish(_ finishFlag: Bool) {
+        print("finish flag:\(finishFlag)")
+    }
+    
+    
+    func audioDidError(_ errorType: ErrorType) {
+        print("errorType:\(errorType)")
+    }
+    
+    func audioPlayDidStop(_ finishType: PlayingState) {
+        print("stop type:\(finishType)")
     }
 }
 

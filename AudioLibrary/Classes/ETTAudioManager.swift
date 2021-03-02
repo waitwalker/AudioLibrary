@@ -10,6 +10,11 @@ import Toaster
     /// - Parameter audioDB: 当前音量值
     @objc optional func audioMeterDidUpdate(_ audioDB: Float) -> Void
     
+    /// 音频录制结束
+    /// - Parameter flag: 结束成功状态
+    @objc optional func audioRecordDidFinish(_ finishFlag: Bool) -> Void
+    
+    
     
     /// 音频播放结束
     /// - Parameter finishType: 音频结束播放类型:自动结束/手动结束/暂停
@@ -34,14 +39,13 @@ public enum RecordingState { case recording, notRecording }
 
 /// 错误类型
 @objc public enum ErrorType: Int {
-    case audioRecorderInitFailed = -1
-    case audioRecorderIsNil      = -2
-    case audioRecorderStopFailed      = -3
-    case audioPlayerPlayFailed      = -4
+    case audioRecorderInitFailed         = -1
+    case audioRecorderIsNil              = -2
+    case audioRecorderStopFailed         = -3
+    case audioPlayerPlayFailed           = -4
     case audioPlayerPlayEncodeError      = -5
-    case audioPlayerStopFailed      = -6
+    case audioPlayerStopFailed           = -6
 }
-
 
 
 /// 音频录制&播放管理类
@@ -127,7 +131,6 @@ public class ETTAudioManager: NSObject {
             audioM.record()
         } else {
             ETTAudioManager.sharedInstance.recordState = .notRecording
-            
             if self.delegate != nil && ((self.delegate?.responds(to: #selector(ETTAudioManagerDelegate.audioDidError(_ :)))) != nil) {
                 delegate?.audioDidError?(.audioRecorderInitFailed)
                 return
@@ -277,7 +280,6 @@ public class ETTAudioManager: NSObject {
             recordedAudioURL = fileURL
             audioFile = try AVAudioFile(forReading: fileURL)
         } catch {
-            Toast(text: "setupAudio failed").show()
         }
     }
     
@@ -339,7 +341,6 @@ public class ETTAudioManager: NSObject {
         do {
             try audioEngine.start()
         } catch {
-            Toast(text: "playSound failed").show()
             return
         }
         
@@ -355,7 +356,6 @@ public class ETTAudioManager: NSObject {
     
     func stopPlaying() -> Void {
         if audioPlayerNode == nil {
-            Toast(text: "stopPlaying failed").show()
             return
         }
     }
@@ -366,6 +366,10 @@ extension ETTAudioManager: AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     public func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         print("录音结束状态:\(flag)")
         deallocTimer()
+        if self.delegate != nil && ((self.delegate?.responds(to: #selector(ETTAudioManagerDelegate.audioRecordDidFinish(_:)))) != nil) {
+            delegate?.audioRecordDidFinish?(flag)
+            return
+        }
     }
     
     public func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
@@ -379,7 +383,7 @@ extension ETTAudioManager: AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     }
     
     public func audioRecorderEncodeErrorDidOccur(_ recorder: AVAudioRecorder, error: Error?) {
-        print("播放本地音频解码错误:\(error)")
+        print("播放本地音频解码错误:\(error!)")
         if self.delegate != nil && ((self.delegate?.responds(to: #selector(ETTAudioManagerDelegate.audioDidError(_ :)))) != nil) {
             delegate?.audioDidError?(.audioPlayerPlayEncodeError)
             return

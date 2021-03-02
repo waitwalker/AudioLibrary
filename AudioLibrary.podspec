@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AudioLibrary'
-  s.version          = '0.5'
+  s.version          = '0.6'
   s.summary          = 'A short description of AudioLibrary.'
 
 # This description is used to generate tags and improve search results.
