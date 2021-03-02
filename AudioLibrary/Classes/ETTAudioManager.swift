@@ -12,8 +12,8 @@ import Toaster
     
     
     /// 音频播放结束
-    /// - Parameter finishType: 音频结束播放类型:自动结束/手动结束
-    @objc optional func audioPlayDidFinish(_ finishType: PlayingState) -> Void
+    /// - Parameter finishType: 音频结束播放类型:自动结束/手动结束/暂停
+    @objc optional func audioPlayDidStop(_ finishType: PlayingState) -> Void
     
     
     /// 错误
@@ -27,8 +27,9 @@ public enum RecordingState { case recording, notRecording }
 /// 播放状态
 @objc public enum PlayingState: Int {
     case playing     = 0
-    case manualFinsh = 1
-    case autoFinish  = 2
+    case pause       = 1
+    case manualFinsh = 2
+    case autoFinish  = 3
 }
 
 /// 错误类型
@@ -79,7 +80,7 @@ public class ETTAudioManager: NSObject {
     /// 是否是录制的timer
     private var isRecordingTimer: Bool = true
     private var count: Int = 0
-    
+    private var pauseCount: Int = 0;
     
     private override init() {
         
@@ -139,7 +140,7 @@ public class ETTAudioManager: NSObject {
     /// - Returns: Void
     private func setupTimer() -> Void {
         if audioTimer == nil {
-            count = 0
+            count = ETTAudioManager.sharedInstance.playState == .pause ? pauseCount : 0
             audioTimer = Timer(timeInterval: isRecordingTimer ? 0.5 : 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
             audioTimer.fire()
             RunLoop.current.add(audioTimer, forMode: RunLoop.Mode.common)
@@ -168,7 +169,6 @@ public class ETTAudioManager: NSObject {
         } else {
             ETTAudioManager.sharedInstance.playingCurrentTime = count
         }
-        
     }
     
     
@@ -230,6 +230,27 @@ public class ETTAudioManager: NSObject {
         }
     }
     
+    
+    /// 暂停本地音频播放
+    /// - Returns: Void
+    public func pausePlayingAudio() -> Void {
+        if audioPlayer == nil {
+            if self.delegate != nil && ((self.delegate?.responds(to: #selector(ETTAudioManagerDelegate.audioDidError(_ :)))) != nil) {
+                delegate?.audioDidError?(.audioPlayerStopFailed)
+                return
+            }
+        }
+        audioPlayer?.pause()
+        deallocTimer()
+        ETTAudioManager.sharedInstance.playState = .pause
+        ETTAudioManager.sharedInstance.pauseCount = count
+        
+        if self.delegate != nil && ((self.delegate?.responds(to: #selector(ETTAudioManagerDelegate.audioPlayDidStop(_ :)))) != nil) {
+            delegate?.audioPlayDidStop?(.pause)
+            return
+        }
+    }
+    
     /// 停止播放音频
     /// - Returns: Void
     public func stopPlayingAudio() -> Void {
@@ -242,6 +263,10 @@ public class ETTAudioManager: NSObject {
         audioPlayer?.stop()
         deallocTimer()
         ETTAudioManager.sharedInstance.playState = .manualFinsh
+        if self.delegate != nil && ((self.delegate?.responds(to: #selector(ETTAudioManagerDelegate.audioPlayDidStop(_ :)))) != nil) {
+            delegate?.audioPlayDidStop?(.manualFinsh)
+            return
+        }
     }
     
     
@@ -333,10 +358,9 @@ public class ETTAudioManager: NSObject {
             Toast(text: "stopPlaying failed").show()
             return
         }
-        
     }
-    
 }
+
 
 extension ETTAudioManager: AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     public func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
@@ -348,6 +372,10 @@ extension ETTAudioManager: AVAudioRecorderDelegate, AVAudioPlayerDelegate {
         print("播放本地音频状态:\(flag)")
         deallocTimer()
         ETTAudioManager.sharedInstance.playState = .autoFinish
+        if self.delegate != nil && ((self.delegate?.responds(to: #selector(ETTAudioManagerDelegate.audioPlayDidStop(_ :)))) != nil) {
+            delegate?.audioPlayDidStop?(.autoFinish)
+            return
+        }
     }
     
     public func audioRecorderEncodeErrorDidOccur(_ recorder: AVAudioRecorder, error: Error?) {
