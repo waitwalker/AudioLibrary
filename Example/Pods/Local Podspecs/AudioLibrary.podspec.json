@@ -1,9 +1,13 @@
 {
   "name": "AudioLibrary",
-  "version": "0.6",
-  "summary": "A short description of AudioLibrary.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "0.8",
+  "summary": "A simple audio recording & playback component.",
+  "description": "A simple audio recording & playback component. Please refer to the sample use.",
   "homepage": "https://github.com/waitwalker/AudioLibrary",
+  "screenshots": [
+    "https://github.com/waitwalker/Resources/blob/master/Library/AudioLibrary/IMG_0261.PNG?raw=true",
+    "https://github.com/waitwalker/Resources/blob/master/Library/AudioLibrary/IMG_0263.PNG?raw=true"
+  ],
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -13,8 +17,9 @@
   },
   "source": {
     "git": "https://github.com/waitwalker/AudioLibrary.git",
-    "tag": "0.6"
+    "tag": "0.8"
   },
+  "social_media_url": "https://twitter.com/waitwalkerme",
   "platforms": {
     "ios": "10.2"
   },
