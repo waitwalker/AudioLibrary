@@ -5,6 +5,18 @@
 [![License](https://img.shields.io/cocoapods/l/AudioLibrary.svg?style=flat)](https://cocoapods.org/pods/AudioLibrary)
 [![Platform](https://img.shields.io/cocoapods/p/AudioLibrary.svg?style=flat)](https://cocoapods.org/pods/AudioLibrary)
 
+
+## Requirements
+
+## Installation
+
+AudioLibrary is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'AudioLibrary'
+```
+
 ## Basic Examples
 ```
 import UIKit
@@ -15,41 +27,49 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        /// setup delegate first
         ETTAudioManager.sharedInstance.delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
+    
+    
+    
+    /// start recording
+    /// - Parameter sender:
     @IBAction func startRecording(_ sender: UIButton) {
         ETTAudioManager.sharedInstance.startRecording(filePath: nil)
         
     }
     
+    /// stop recording
+    /// - Parameter sender:
     @IBAction func stopRecording(_ sender: UIButton) {
         ETTAudioManager.sharedInstance.stopRecording()
         print("录音录制时长:\(ETTAudioManager.sharedInstance.recordingDuration)")
     }
     
     
+    /// start playing
+    /// - Parameter sender:
     @IBAction func startPlaying(_ sender: UIButton) {
         ETTAudioManager.sharedInstance.startPlayingAudio()
         print("录音播放时长:\(ETTAudioManager.sharedInstance.playingDuration)")
     }
     
+    /// pause playing
+    /// - Parameter sender:
     @IBAction func pausePlaying(_ sender: UIButton) {
         ETTAudioManager.sharedInstance.pausePlayingAudio()
         print("录音播放时长:\(ETTAudioManager.sharedInstance.playingDuration)")
     }
     
+    /// stop playing
+    /// - Parameter sender:
     @IBAction func stopPlaying(_ sender: UIButton) {
         ETTAudioManager.sharedInstance.stopPlayingAudio()
     }
-    
-    
 }
 
+/// ETTAudioManagerDelegate call back
 extension ViewController: ETTAudioManagerDelegate {
     
     func audioMeterDidUpdate(_ audioDB: Float) {
@@ -82,18 +102,7 @@ extension ViewController: ETTAudioManagerDelegate {
     }
 }
 
-```
 
-
-## Requirements
-
-## Installation
-
-AudioLibrary is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'AudioLibrary'
 ```
 
 ## Author
