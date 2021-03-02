@@ -14,6 +14,11 @@ import Toaster
     /// 音频播放结束
     /// - Parameter finishType: 音频结束播放类型:自动结束/手动结束
     @objc optional func audioPlayDidFinish(_ finishType: PlayingState) -> Void
+    
+    
+    /// 错误
+    /// - Parameter errorType: 错误类型
+    @objc optional func audioDidError(_ errorType: ErrorType) -> Void
 }
 
 /// 录制状态
@@ -26,8 +31,19 @@ public enum RecordingState { case recording, notRecording }
     case autoFinish  = 2
 }
 
+/// 错误类型
+@objc public enum ErrorType: Int {
+    case audioRecorderInitFailed = -1
+    case audioRecorderIsNil      = -2
+    case audioRecorderStopFailed      = -3
+    case audioPlayerPlayFailed      = -4
+    case audioPlayerPlayEncodeError      = -5
+    case audioPlayerStopFailed      = -6
+}
 
 
+
+/// 音频录制&播放管理类
 public class ETTAudioManager: NSObject {
     public static let sharedInstance = ETTAudioManager()
     
@@ -110,9 +126,11 @@ public class ETTAudioManager: NSObject {
             audioM.record()
         } else {
             ETTAudioManager.sharedInstance.recordState = .notRecording
-            //assert(self.audioRecorder == nil, "Init audioRecorder failed")
-            Toast(text: "Init audioRecorder failed").show()
             
+            if self.delegate != nil && ((self.delegate?.responds(to: #selector(ETTAudioManagerDelegate.audioDidError(_ :)))) != nil) {
+                delegate?.audioDidError?(.audioRecorderInitFailed)
+                return
+            }
         }
     }
     
@@ -137,7 +155,9 @@ public class ETTAudioManager: NSObject {
             ETTAudioManager.sharedInstance.recordingCurrentTime = Int(count / 2)
             if self.delegate != nil && ((self.delegate?.responds(to: #selector(ETTAudioManagerDelegate.audioMeterDidUpdate(_ :)))) != nil) {
                 guard let recorder = audioRecorder else {
-                    Toast(text: "audioRecorder is nil").show()
+                    if self.delegate != nil && ((self.delegate?.responds(to: #selector(ETTAudioManagerDelegate.audioDidError(_ :)))) != nil) {
+                        delegate?.audioDidError?(.audioRecorderIsNil)
+                    }
                     return
                 }
                 
@@ -180,8 +200,10 @@ public class ETTAudioManager: NSObject {
             print("音频时间")
         } else {
             ETTAudioManager.sharedInstance.recordingDuration = 0
-            Toast(text: "stopRecording failed").show()
-            //assert(self.audioRecorder == nil, "audioRecorder is nil ")
+            if self.delegate != nil && ((self.delegate?.responds(to: #selector(ETTAudioManagerDelegate.audioDidError(_ :)))) != nil) {
+                delegate?.audioDidError?(.audioRecorderStopFailed)
+                return
+            }
         }
     }
     
@@ -201,7 +223,10 @@ public class ETTAudioManager: NSObject {
             audioPlayer?.play()
             ETTAudioManager.sharedInstance.playState = .playing
         } catch {
-            Toast(text: "startPlayingAudio failed").show()
+            if self.delegate != nil && ((self.delegate?.responds(to: #selector(ETTAudioManagerDelegate.audioDidError(_ :)))) != nil) {
+                delegate?.audioDidError?(.audioPlayerPlayFailed)
+                return
+            }
         }
     }
     
@@ -209,8 +234,10 @@ public class ETTAudioManager: NSObject {
     /// - Returns: Void
     public func stopPlayingAudio() -> Void {
         if audioPlayer == nil {
-            Toast(text: "stopPlayingAudio failed").show()
-            return
+            if self.delegate != nil && ((self.delegate?.responds(to: #selector(ETTAudioManagerDelegate.audioDidError(_ :)))) != nil) {
+                delegate?.audioDidError?(.audioPlayerStopFailed)
+                return
+            }
         }
         audioPlayer?.stop()
         deallocTimer()
@@ -321,5 +348,13 @@ extension ETTAudioManager: AVAudioRecorderDelegate, AVAudioPlayerDelegate {
         print("播放本地音频状态:\(flag)")
         deallocTimer()
         ETTAudioManager.sharedInstance.playState = .autoFinish
+    }
+    
+    public func audioRecorderEncodeErrorDidOccur(_ recorder: AVAudioRecorder, error: Error?) {
+        print("播放本地音频解码错误:\(error)")
+        if self.delegate != nil && ((self.delegate?.responds(to: #selector(ETTAudioManagerDelegate.audioDidError(_ :)))) != nil) {
+            delegate?.audioDidError?(.audioPlayerPlayEncodeError)
+            return
+        }
     }
 }
