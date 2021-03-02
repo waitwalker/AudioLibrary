@@ -8,14 +8,24 @@ import Toaster
     
     /// 更新当前db音量
     /// - Parameter audioDB: 当前音量值
-    @objc optional func audioMeterDidUpdate(_ audioDB: Float)
+    @objc optional func audioMeterDidUpdate(_ audioDB: Float) -> Void
+    
+    
+    /// 音频播放结束
+    /// - Parameter finishType: 音频结束播放类型:自动结束/手动结束
+    @objc optional func audioPlayDidFinish(_ finishType: PlayingState) -> Void
 }
 
 /// 录制状态
 public enum RecordingState { case recording, notRecording }
 
 /// 播放状态
-public enum PlayingState { case playing, notPlaying }
+@objc public enum PlayingState: Int {
+    case playing     = 0
+    case manualFinsh = 1
+    case autoFinish  = 2
+}
+
 
 
 public class ETTAudioManager: NSObject {
@@ -204,7 +214,7 @@ public class ETTAudioManager: NSObject {
         }
         audioPlayer?.stop()
         deallocTimer()
-        ETTAudioManager.sharedInstance.playState = .notPlaying
+        ETTAudioManager.sharedInstance.playState = .manualFinsh
     }
     
     
@@ -310,5 +320,6 @@ extension ETTAudioManager: AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     public func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         print("播放本地音频状态:\(flag)")
         deallocTimer()
+        ETTAudioManager.sharedInstance.playState = .autoFinish
     }
 }
