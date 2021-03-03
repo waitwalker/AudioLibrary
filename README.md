@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     /// start playing
     /// - Parameter sender:
     @IBAction func startPlaying(_ sender: UIButton) {
-        ETTAudioManager.sharedInstance.startPlayingAudio()
+        ETTAudioManager.sharedInstance.startPlayingAudio(localPath: ETTAudioManager.sharedInstance.recordFilePath!)
         print("录音播放时长:\(ETTAudioManager.sharedInstance.playingDuration)")
     }
     
@@ -101,6 +101,7 @@ extension ViewController: ETTAudioManagerDelegate {
         print("stop type:\(finishType)")
     }
 }
+
 
 
 ```

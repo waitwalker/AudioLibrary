@@ -1,5 +1,5 @@
 PODS:
-  - AudioLibrary (0.8)
+  - AudioLibrary (0.9)
 
 DEPENDENCIES:
   - AudioLibrary (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AudioLibrary: fdae435c6dd0134416b5ab67eacf73ea033b94fd
+  AudioLibrary: 229e76f20b130b7d46eb18de3d011e4b00e6f1ce
 
 PODFILE CHECKSUM: d7946f614d6af55a399bc473f91f23d286e2aea9
 

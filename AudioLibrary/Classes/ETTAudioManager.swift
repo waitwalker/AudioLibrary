@@ -101,10 +101,7 @@ public class ETTAudioManager: NSObject {
         if let path = filePath {
             fullPath = path
         } else {
-            let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
-            let recordingName = "recordedVoice.m4a"
-            let pathArray = [dirPath, recordingName]
-            fullPath = pathArray.joined(separator: "/")
+            fullPath = setupFilePath()
         }
         fileURL = URL(string: fullPath!)
         ETTAudioManager.sharedInstance.recordFilePath = fileURL
@@ -143,7 +140,7 @@ public class ETTAudioManager: NSObject {
     private func setupTimer() -> Void {
         if audioTimer == nil {
             count = ETTAudioManager.sharedInstance.playState == .pause ? pauseCount : 0
-            audioTimer = Timer(timeInterval: isRecordingTimer ? 0.5 : 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+            audioTimer = Timer(timeInterval: 0.1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
             audioTimer.fire()
             RunLoop.current.add(audioTimer, forMode: RunLoop.Mode.common)
         }
@@ -212,18 +209,26 @@ public class ETTAudioManager: NSObject {
     
     /// 播放本地音频
     /// - Parameter localPath: 本地音频路径
-    public func startPlayingAudio(localPath: URL? = nil) {
+    public func startPlayingAudio(localPath: URL) {
         try! AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: localPath ?? ETTAudioManager.sharedInstance.recordFilePath!)
+            audioPlayer = try AVAudioPlayer(contentsOf: localPath)
             audioPlayer?.prepareToPlay()
             ETTAudioManager.sharedInstance.playingDuration = Int(audioPlayer!.duration)
             audioPlayer?.delegate = self
             
             isRecordingTimer = false
-            setupTimer()
-            audioPlayer?.play()
-            ETTAudioManager.sharedInstance.playState = .playing
+            if ETTAudioManager.sharedInstance.playState == .pause {
+                audioPlayer?.currentTime = Double(pauseCount) / 10.0
+                audioPlayer?.play()
+                setupTimer()
+                ETTAudioManager.sharedInstance.playState = .playing
+            } else {
+                audioPlayer?.play()
+                ETTAudioManager.sharedInstance.playState = .playing
+                setupTimer()
+            }
+            
         } catch {
             if self.delegate != nil && ((self.delegate?.responds(to: #selector(ETTAudioManagerDelegate.audioDidError(_ :)))) != nil) {
                 delegate?.audioDidError?(.audioPlayerPlayFailed)
@@ -249,7 +254,6 @@ public class ETTAudioManager: NSObject {
         
         if self.delegate != nil && ((self.delegate?.responds(to: #selector(ETTAudioManagerDelegate.audioPlayDidStop(_ :)))) != nil) {
             delegate?.audioPlayDidStop?(.pause)
-            return
         }
     }
     
@@ -269,6 +273,17 @@ public class ETTAudioManager: NSObject {
             delegate?.audioPlayDidStop?(.manualFinsh)
             return
         }
+    }
+    
+    
+    /// 设置文件本地缓存路径
+    /// - Returns: Void
+    private func setupFilePath() -> String {
+        let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
+        let recordingName = "recordedVoice.m4a"
+        let pathArray = [dirPath, recordingName]
+        let fullPath = pathArray.joined(separator: "/")
+        return fullPath
     }
     
     

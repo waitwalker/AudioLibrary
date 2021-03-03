@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AudioLibrary'
-  s.version          = '0.8'
+  s.version          = '0.9'
   s.summary          = 'A simple audio recording & playback component.'
 
 # This description is used to generate tags and improve search results.
