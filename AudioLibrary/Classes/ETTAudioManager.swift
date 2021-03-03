@@ -13,12 +13,9 @@ import AVFoundation
     /// - Parameter flag: 结束成功状态
     @objc optional func audioRecordDidFinish(_ finishFlag: Bool) -> Void
     
-    
-    
     /// 音频播放结束
     /// - Parameter finishType: 音频结束播放类型:自动结束/手动结束/暂停
     @objc optional func audioPlayDidStop(_ finishType: PlayingState) -> Void
-    
     
     /// 错误
     /// - Parameter errorType: 错误类型
@@ -284,94 +281,6 @@ public class ETTAudioManager: NSObject {
         let pathArray = [dirPath, recordingName]
         let fullPath = pathArray.joined(separator: "/")
         return fullPath
-    }
-    
-    
-    /// 设置音频相关文件
-    /// - Parameter fileURL: 文件存储路径
-    public func setupAudio(fileURL: URL) {
-        do {
-            recordedAudioURL = fileURL
-            audioFile = try AVAudioFile(forReading: fileURL)
-        } catch {
-        }
-    }
-    
-    
-    /// 开始播放音频
-    /// - Parameters:
-    ///   - rate: 播放速度
-    ///   - pitch: 音调
-    ///   - echo: 是否回声
-    ///   - reverb: 是否混响
-    public func playSound(rate: Float? = nil, pitch: Float? = nil, echo: Bool = false, reverb: Bool = false) {
-        audioEngine = AVAudioEngine()
-        
-        audioPlayerNode = AVAudioPlayerNode()
-        audioEngine.attach(audioPlayerNode)
-        
-        let changeRatePitchNode = AVAudioUnitTimePitch()
-        if let pitch = pitch {
-            changeRatePitchNode.pitch = pitch
-        }
-        if let rate = rate {
-            changeRatePitchNode.rate = rate
-        }
-        audioEngine.attach(changeRatePitchNode)
-        
-        let echoNode = AVAudioUnitDistortion()
-        echoNode.loadFactoryPreset(.multiEcho1)
-        audioEngine.attach(echoNode)
-        
-        let reverbNode = AVAudioUnitReverb()
-        reverbNode.loadFactoryPreset(.cathedral)
-        reverbNode.wetDryMix = 50
-        audioEngine.attach(reverbNode)
-        
-        if echo == true && reverb == true {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, reverbNode, audioEngine.outputNode)
-        } else if echo == true {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, audioEngine.outputNode)
-        } else if reverb == true {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, reverbNode, audioEngine.outputNode)
-        } else {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, audioEngine.outputNode)
-        }
-        
-        audioPlayerNode.stop()
-        audioPlayerNode.scheduleFile(audioFile, at: nil) {
-            
-            var delayInSeconds: Double = 0
-            if let lastRenderTime = self.audioPlayerNode.lastRenderTime, let playerTime = self.audioPlayerNode.playerTime(forNodeTime: lastRenderTime) {
-                
-                if let rate = rate {
-                    delayInSeconds = Double(self.audioFile.length - playerTime.sampleTime) / Double(self.audioFile.processingFormat.sampleRate) / Double(rate)
-                } else {
-                    delayInSeconds = Double(self.audioFile.length - playerTime.sampleTime) / Double(self.audioFile.processingFormat.sampleRate)
-                }
-            }
-        }
-        
-        do {
-            try audioEngine.start()
-        } catch {
-            return
-        }
-        
-        // 开始播放
-        audioPlayerNode.play()
-    }
-    
-    func connectAudioNodes(_ nodes: AVAudioNode...) {
-        for x in 0..<nodes.count-1 {
-            audioEngine.connect(nodes[x], to: nodes[x+1], format: audioFile.processingFormat)
-        }
-    }
-    
-    func stopPlaying() -> Void {
-        if audioPlayerNode == nil {
-            return
-        }
     }
 }
 
